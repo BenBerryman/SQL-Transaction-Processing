@@ -11,13 +11,13 @@ ticket reservations in an airline database system.
 
 ### Installation
 
-#### Set Up the Database
+#### Set Up the Schema
 **NOTE:** For proper usage, tables should be initialized in the PostgreSQL user's default database (with the same name as the user).  
-This program uses a database modeled around an airport and flights system. The database used for this program is
-a modified, much slimmer version of the original database. To create the database:
+This program uses a schema modeled around an airport and flights system. The schema used for this program is
+a modified, much slimmer version of the original schema. To create the schema:
 
 - Open a Terminal window
-- Navigate to the *Files* file
+- Navigate to the ***Files*** file
 - Type:
 ```bash
 psql
