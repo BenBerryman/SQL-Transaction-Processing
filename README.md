@@ -15,7 +15,7 @@ ticket reservations in an airline database system.
 This program uses a database modeled around an airport and flights system. The database used for this program is
 a modified, much slimmer version of the original database. To create the database:
 For proper usage, the tables should be initialized in a
-database titled 'airline', with the default 'public' schema. The file ***make_airline_sql.sql*** in the repository 
+database titled 'airline', with the default 'public' schema. The file ***make_airline.sql*** in the repository 
 will create the database used for the program.
 - Open a Terminal window
 - Navigate to the *Files* file
@@ -28,7 +28,7 @@ psql
 ```postgresql
 CREATE SCHEMA airline;
 SET SCHEMA 'airline';
-\i make_airline_sql.sql;
+\i make_airline.sql;
 ```
 
 - The user login information for the database should be stored in a plain text file titled ***password.txt*** 
@@ -56,3 +56,12 @@ python transaction-bookings.py "input=Files/<txt>;transaction=[y|n];threads=<int
 
 After running, the program will output various statistics about the run to the console.
 It will also create a file *transaction-bookings.sql* with all of the SQL queries used for the run.
+
+## Outline
+
+- **transaction-bookings.py** : Main program. Connects to database, creates and runs threads for booking transactions,
+and outputs result statistics.
+- **password.txt** : Contains the username and password for the PostgreSQL user
+- **make_airline.sql** : Creates the database tables.
+- **transaction-bookings.sql** : Generated after every run of the program. Displays the SQL code useed in the run.
+
